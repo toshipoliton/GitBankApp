@@ -6,7 +6,7 @@ using Bank2.Core.Accounts;
 
 namespace Bank2.Core
 {
-        //jelani2
+        //jelani234
     public class Bank
     {
         private int _intrestRate;
