@@ -6,7 +6,7 @@ using Bank2.Core.Accounts;
 
 namespace Bank2.Core
 {
-        //Does this Show?2
+        //jelani
     public class Bank
     {
         private int _intrestRate;
