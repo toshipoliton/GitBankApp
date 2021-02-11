@@ -36,7 +36,7 @@ namespace Bank2
             var number = b.CreateBankAccount(AccountType.SavingsAccount, 0);
 
 
-            b.Withdrawl(number, -20);
+            b.Deposit(number, 20);
 
             Console.ReadLine();
         }

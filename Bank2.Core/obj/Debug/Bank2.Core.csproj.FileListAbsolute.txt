@@ -16,3 +16,9 @@ D:\ProjectsVS\Bank2.4\Bank2.4\Bank2.Core\obj\Debug\Bank2.Core.csprojAssemblyRefe
 D:\ProjectsVS\Bank2.4\Bank2.4\Bank2.Core\obj\Debug\Bank2.Core.csproj.CoreCompileInputs.cache
 D:\ProjectsVS\Bank2.4\Bank2.4\Bank2.Core\obj\Debug\Bank2.Core.dll
 D:\ProjectsVS\Bank2.4\Bank2.4\Bank2.Core\obj\Debug\Bank2.Core.pdb
+C:\Users\Jelani\Source\Repos\GitBankApp\Bank2.Core\bin\Debug\Bank2.Core.dll
+C:\Users\Jelani\Source\Repos\GitBankApp\Bank2.Core\bin\Debug\Bank2.Core.pdb
+C:\Users\Jelani\Source\Repos\GitBankApp\Bank2.Core\obj\Debug\Bank2.Core.csprojAssemblyReference.cache
+C:\Users\Jelani\Source\Repos\GitBankApp\Bank2.Core\obj\Debug\Bank2.Core.csproj.CoreCompileInputs.cache
+C:\Users\Jelani\Source\Repos\GitBankApp\Bank2.Core\obj\Debug\Bank2.Core.dll
+C:\Users\Jelani\Source\Repos\GitBankApp\Bank2.Core\obj\Debug\Bank2.Core.pdb
