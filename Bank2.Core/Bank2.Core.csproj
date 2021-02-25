@@ -110,6 +110,9 @@
       <DependentUpon>BankingSystemModel.edmx</DependentUpon>
       <LastGenOutput>BankingSystemModel.cs</LastGenOutput>
     </Content>
+    <Content Include="SQL\2_CheckingsAccount_tbl.sql" />
+    <Content Include="SQL\1_Person_tbl.sql" />
+    <Content Include="SQL\3_SavingsAccount_tbl.sql" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
