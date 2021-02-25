@@ -89,3 +89,7 @@ D:\ProjectsVS\Bank2.4\Bank2.4\Bank2Tests\obj\Debug\Bank2Tests.csproj.CoreCompile
 D:\ProjectsVS\Bank2.4\Bank2.4\Bank2Tests\obj\Debug\Bank2Tests.csproj.CopyComplete
 D:\ProjectsVS\Bank2.4\Bank2.4\Bank2Tests\obj\Debug\Bank2Tests.dll
 D:\ProjectsVS\Bank2.4\Bank2.4\Bank2Tests\obj\Debug\Bank2Tests.pdb
+D:\Projects\GitBankApp\Bank2Tests\obj\Debug\Bank2Tests.csprojAssemblyReference.cache
+D:\Projects\GitBankApp\Bank2Tests\obj\Debug\Bank2Tests.csproj.CoreCompileInputs.cache
+D:\Projects\GitBankApp\Bank2Tests\obj\Debug\Bank2Tests.dll
+D:\Projects\GitBankApp\Bank2Tests\obj\Debug\Bank2Tests.pdb
