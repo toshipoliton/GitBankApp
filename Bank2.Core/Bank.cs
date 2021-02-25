@@ -44,7 +44,7 @@ namespace Bank2.Core
         /// <param name="accounttype">enum AccountType</param>
         /// <param name="amount">double amount</param>
         /// <returns>returns the account number</returns>
-        public Guid CreateBankAccount(string personName, AccountType accounttype)
+        public Guid CreateBankAccount(string personName, AccountType accounttype, decimal amount = 0)
         {
             var personId = CreateOrReturnPerson(personName);
             Account a;
@@ -52,13 +52,13 @@ namespace Bank2.Core
             switch (accounttype)
             {
                 case AccountType.CheckingsAcccount:                    
-                    Insert.CheckingsAccount(personId);
-                    var checkings = Get.ChekcingsAccount(personId);
+                    InsertOrUpdate.CheckingsAccount(personId, amount);
+                    var checkings = Get.CheckingsAccount(personId);
                     a = new CheckingsAccount(checkings.AccountId, checkings.Amount);
                     _accounts.Add(a);
                     return a.AccountNumber;
                 case AccountType.SavingsAccount:                    
-                    Insert.SavingsAccount(personId);
+                    InsertOrUpdate.SavingsAccount(personId, amount);
                     var savings = Get.SavingsAccount(personId);
                     a = new SavingsAccount(savings.AccountId, savings.Amount, savings.Interest);
                     _accounts.Add(a);

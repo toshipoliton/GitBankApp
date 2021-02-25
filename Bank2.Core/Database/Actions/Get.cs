@@ -24,11 +24,11 @@ namespace Bank2.Core.Database.Actions
             }
         }
 
-        public static CheckingsAccount ChekcingsAccount(int personId)
+        public static CheckingsAccount CheckingsAccount(int personId)
         {
             using (var db = new BankingSystemEntities())
             {
-                return db.CheckingsAccounts.FirstOrDefault(p => p.ID == personId);
+                return db.CheckingsAccounts.FirstOrDefault(p => p.PersonId == personId);
             }
         }
 
@@ -36,7 +36,7 @@ namespace Bank2.Core.Database.Actions
         {
             using (var db = new BankingSystemEntities())
             {
-                return db.SavingsAccounts.FirstOrDefault(p => p.ID == personId);
+                return db.SavingsAccounts.FirstOrDefault(p => p.PersonId == personId);
             }
         }
     }

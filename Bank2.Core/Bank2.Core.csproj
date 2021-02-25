@@ -59,6 +59,7 @@
     <Compile Include="Database\Actions\CheckIf.cs" />
     <Compile Include="Database\Actions\Get.cs" />
     <Compile Include="Database\Actions\Insert.cs" />
+    <Compile Include="Database\Actions\InsertOrUpdate.cs" />
     <Compile Include="Database\Actions\Update.cs" />
     <Compile Include="Database\BankingSystemModel.Context.cs">
       <AutoGen>True</AutoGen>

@@ -10,15 +10,7 @@ namespace Bank2
         {
             _interest = interest;
         }
-
-        public override void WithDraw(decimal amount)
-        {
-            // check to see if we have enough balance..
-            if (Balance < amount) throw new ApplicationException("not sufficient funds");
-            
-            Balance -= amount;
-        }
-
+       
         public override void Deposit(decimal amount)
         {
             base.Deposit(amount + CalculateInterest(Balance + amount));

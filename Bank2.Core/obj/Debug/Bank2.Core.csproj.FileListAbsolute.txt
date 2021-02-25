@@ -27,3 +27,4 @@ D:\Projects\GitBankApp\Bank2.Core\obj\Debug\Bank2.Core.csproj.CoreCompileInputs.
 D:\Projects\GitBankApp\Bank2.Core\obj\Debug\Bank2.Core.csproj.CopyComplete
 D:\Projects\GitBankApp\Bank2.Core\obj\Debug\Bank2.Core.dll
 D:\Projects\GitBankApp\Bank2.Core\obj\Debug\Bank2.Core.pdb
+D:\Projects\GitBankApp\Bank2.Core\obj\Debug\Bank2.Core.csprojAssemblyReference.cache

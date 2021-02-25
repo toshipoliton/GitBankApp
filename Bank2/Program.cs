@@ -10,13 +10,14 @@ namespace Bank2
         
         private static void Main(string[] args)
         {
-
             Bank b = new Bank();
             
-            var number = b.CreateBankAccount("Toshi", AccountType.SavingsAccount);
+            var number = b.CreateBankAccount("Toshi", AccountType.CheckingsAcccount);
 
 
-            b.Deposit(number, 20);
+            b.Withdrawl(number, 20);
+
+            b.Deposit(number, 100);
 
             Console.ReadLine();
         }
