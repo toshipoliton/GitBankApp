@@ -56,22 +56,17 @@
     <Compile Include="Accounts\Enum\AccountType.cs" />
     <Compile Include="Accounts\SavingsAccount.cs" />
     <Compile Include="Bank.cs" />
-    <Compile Include="Database\Actions\CheckIf.cs" />
-    <Compile Include="Database\Actions\Get.cs" />
-    <Compile Include="Database\Actions\Insert.cs" />
-    <Compile Include="Database\Actions\InsertOrUpdate.cs" />
-    <Compile Include="Database\Actions\Update.cs" />
-    <Compile Include="Database\BankingSystemModel.Context.cs">
+    <Compile Include="Database\BankingSystemModel.Context1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BankingSystemModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\BankingSystemModel.cs">
+    <Compile Include="Database\BankingSystemModel1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BankingSystemModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\BankingSystemModel.Designer.cs">
+    <Compile Include="Database\BankingSystemModel1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BankingSystemModel.edmx</DependentUpon>
@@ -86,15 +81,19 @@
       <DependentUpon>BankingSystemModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="Database\BankingSystemModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>BankingSystemModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <Compile Include="Services\AccountService.cs" />
+    <Compile Include="Services\IAccountService.cs" />
+    <Compile Include="Services\IPersonService.cs" />
+    <Compile Include="Services\PersonService.cs" />
+    <Compile Include="Services\TestAccountService.cs" />
+    <Compile Include="Services\TestPersonService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
+    <EntityDeploy Include="Database\BankingSystemModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BankingSystemModel1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="Database\BankingSystemModel.edmx.diagram">
       <DependentUpon>BankingSystemModel.edmx</DependentUpon>
     </None>
@@ -103,13 +102,11 @@
   <ItemGroup>
     <Content Include="Database\BankingSystemModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BankingSystemModel.Context.cs</LastGenOutput>
-      <DependentUpon>BankingSystemModel.edmx</DependentUpon>
+      <LastGenOutput>BankingSystemModel.Context1.cs</LastGenOutput>
     </Content>
     <Content Include="Database\BankingSystemModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BankingSystemModel.edmx</DependentUpon>
-      <LastGenOutput>BankingSystemModel.cs</LastGenOutput>
+      <LastGenOutput>BankingSystemModel1.cs</LastGenOutput>
     </Content>
     <Content Include="SQL\2_CheckingsAccount_tbl.sql" />
     <Content Include="SQL\1_Person_tbl.sql" />

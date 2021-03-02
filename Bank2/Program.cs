@@ -2,6 +2,7 @@
 using Bank2.Core.Accounts.Enum;
 using Bank2.Core;
 using System.Collections.Generic;
+using Bank2.Core.Services;
 
 namespace Bank2
 {
@@ -10,12 +11,12 @@ namespace Bank2
         
         private static void Main(string[] args)
         {
-            Bank b = new Bank();
+            Bank b = new Bank(new TestPersonService(), new AccountService());
             
-            var number = b.CreateBankAccount("Toshi", AccountType.CheckingsAcccount);
+            var number = b.CreateBankAccount("Jelani", AccountType.SavingsAccount);
 
 
-            b.Withdrawl(number, 20);
+            //b.Withdrawl(number, 20);
 
             b.Deposit(number, 100);
 

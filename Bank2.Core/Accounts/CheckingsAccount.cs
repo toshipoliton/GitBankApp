@@ -6,7 +6,7 @@ namespace Bank2.Core.Accounts
 {
     public class CheckingsAccount : Account
     {
-        public CheckingsAccount(Guid Number, decimal Amount) : base(Number, Amount, AccountType.CheckingsAcccount) 
+        public CheckingsAccount(Guid Number, decimal Amount) : base(Number, Amount) 
         {
         }
     }

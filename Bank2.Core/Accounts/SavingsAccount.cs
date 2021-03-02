@@ -1,12 +1,12 @@
 ﻿using Bank2.Core.Accounts.Base;
 using Bank2.Core.Accounts.Enum;
 using System;
-namespace Bank2
+namespace Bank2.Core.Accounts
 {
     public class SavingsAccount : Account
     {
         private decimal _interest;
-        public SavingsAccount(Guid Number, decimal Amount, decimal interest) : base(Number, Amount, AccountType.SavingsAccount) 
+        public SavingsAccount(Guid Number, decimal Amount, decimal interest) : base(Number, Amount) 
         {
             _interest = interest;
         }

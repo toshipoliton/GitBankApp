@@ -2,41 +2,29 @@
 using System.Collections.Generic;
 using Bank2.Core.Accounts.Base;
 using Bank2.Core.Accounts.Enum;
-using Bank2.Core.Accounts;
-using Bank2.Core.Database.Actions;
+using Bank2.Core.Services;
 
 namespace Bank2.Core
 {
         //toshi4567
     public class Bank
     {
-        private int _intrestRate;
+        #region fields for the back
         private List<Account> _accounts;    
         public List<Account> accounts => _accounts;
+        IPersonService _personservice;
+        IAccountService _accountService;
+        #endregion // fields
 
-        public Bank()
+        #region constructors
+        public Bank(IPersonService ps, IAccountService acs)
         {
-            _intrestRate = 10;
             _accounts = new List<Account>();
+            _personservice = ps;
+            _accountService = acs;
         }
-
-        public Bank(int intrest)
-        {
-            _intrestRate = intrest;
-            _accounts = new List<Account>();
-        }
-
-        private int CreateOrReturnPerson(string name)
-        {
-            if(CheckIf.PersonExists(name))
-            {
-                return Get.PersonByName(name).ID;
-            }
-            else
-            {
-                return Insert.Person(name);                
-            }
-        }
+        public Bank() : this(new PersonService(), new AccountService()){}
+        #endregion // constructors
 
         /// <summary>
         /// Create Bank Account
@@ -46,23 +34,17 @@ namespace Bank2.Core
         /// <returns>returns the account number</returns>
         public Guid CreateBankAccount(string personName, AccountType accounttype, decimal amount = 0)
         {
-            var personId = CreateOrReturnPerson(personName);
-            Account a;
-            var id = Guid.NewGuid().ToString();
+            var personId = _personservice.GetPersonByName(personName);
             switch (accounttype)
             {
-                case AccountType.CheckingsAcccount:                    
-                    InsertOrUpdate.CheckingsAccount(personId, amount);
-                    var checkings = Get.CheckingsAccount(personId);
-                    a = new CheckingsAccount(checkings.AccountId, checkings.Amount);
-                    _accounts.Add(a);
-                    return a.AccountNumber;
-                case AccountType.SavingsAccount:                    
-                    InsertOrUpdate.SavingsAccount(personId, amount);
-                    var savings = Get.SavingsAccount(personId);
-                    a = new SavingsAccount(savings.AccountId, savings.Amount, savings.Interest);
-                    _accounts.Add(a);
-                    return a.AccountNumber;
+                case AccountType.CheckingsAcccount:
+                    var account = _accountService.createCheckingsAccount(personId, amount);
+                    _accounts.Add(account);
+                    return account.AccountNumber;
+                case AccountType.SavingsAccount:
+                    var saccount = _accountService.createSavingsAccount(personId, amount);
+                    _accounts.Add(saccount);
+                    return saccount.AccountNumber;
                 default:
                     return Guid.Empty;
             }            
@@ -71,9 +53,11 @@ namespace Bank2.Core
         public void Deposit(Guid accountnumber, decimal amount)
         {
             var account = FindAccount(accountnumber);
-
-            if (account != null) 
+            if (account != null)
+            {
                 account.Deposit(amount);
+                _accountService.UpdateBalance(account, amount);
+            }
 
             Console.WriteLine(GetAmount(accountnumber));
         }
@@ -99,7 +83,11 @@ namespace Bank2.Core
         public void Withdrawl(Guid accountnumber, decimal amount)
         {
             var account = FindAccount(accountnumber);
-            if (account != null) account.WithDraw(amount);
+            if (account != null)
+            {
+                account.WithDraw(amount);
+                _accountService.UpdateBalance(account, -1 * amount);
+            }
         }
 
         public void Transfer(Guid accountone, Guid accounttwo, decimal amount)
