@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 namespace Bank2.Core.Services
 {
     public interface IAccountService
-    {
-        CheckingsAccount createCheckingsAccount(int personId, decimal amount);
-        SavingsAccount createSavingsAccount(int personId, decimal amount);
+    { 
+        CheckingsAccount CreateCheckingsAccount(int personId, decimal amount);
+        SavingsAccount CreateSavingsAccount(int personId, decimal amount);
 
         void UpdateBalance(Account account, decimal amount);
     }

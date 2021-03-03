@@ -1,0 +1,15 @@
+D:\Projects\GitBankApp\Bank2\bin\Release\Bank2.exe.config
+D:\Projects\GitBankApp\Bank2\bin\Release\Bank2.exe
+D:\Projects\GitBankApp\Bank2\bin\Release\Bank2.pdb
+D:\Projects\GitBankApp\Bank2\bin\Release\Bank2.Core.dll
+D:\Projects\GitBankApp\Bank2\bin\Release\EntityFramework.dll
+D:\Projects\GitBankApp\Bank2\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\GitBankApp\Bank2\bin\Release\Bank2.Core.pdb
+D:\Projects\GitBankApp\Bank2\bin\Release\Bank2.Core.dll.config
+D:\Projects\GitBankApp\Bank2\bin\Release\EntityFramework.xml
+D:\Projects\GitBankApp\Bank2\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\GitBankApp\Bank2\obj\Release\Bank2.csprojAssemblyReference.cache
+D:\Projects\GitBankApp\Bank2\obj\Release\Bank2.csproj.CoreCompileInputs.cache
+D:\Projects\GitBankApp\Bank2\obj\Release\Bank2.csproj.CopyComplete
+D:\Projects\GitBankApp\Bank2\obj\Release\Bank2.exe
+D:\Projects\GitBankApp\Bank2\obj\Release\Bank2.pdb

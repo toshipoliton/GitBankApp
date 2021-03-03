@@ -20,7 +20,11 @@ namespace Bank2.Core.Accounts.Base
 
         public virtual void Deposit(decimal amount)
         {
-            if (amount <= 0) throw new ApplicationException("Amount must be positive");
+            if (amount <= 0)
+            {
+                Console.WriteLine("Amount must be positive");
+                return;
+            }
             Balance += amount; 
         }
     }

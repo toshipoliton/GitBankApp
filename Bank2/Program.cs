@@ -11,16 +11,17 @@ namespace Bank2
         
         private static void Main(string[] args)
         {
-            Bank b = new Bank(new TestPersonService(), new AccountService());
+            Bank b = new Bank(new PersonService(),new AccountService());
             
-            var number = b.CreateBankAccount("Jelani", AccountType.SavingsAccount);
+            var number = b.CreateBankAccount("Franco", AccountType.SavingsAccount);
 
 
-            //b.Withdrawl(number, 20);
+            b.Withdrawl(number, 30);
 
-            b.Deposit(number, 100);
+            b.Deposit(number, 45);
 
             Console.ReadLine();
+            
         }
     }
 }

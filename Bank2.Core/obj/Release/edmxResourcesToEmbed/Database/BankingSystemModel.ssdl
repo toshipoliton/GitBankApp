@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankingSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CheckingsAccount">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+    <Property Name="AccountId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="350" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SavingsAccount">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+    <Property Name="AccountId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Interest" Type="decimal" Precision="19" Scale="4" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CheckingsAccount_Person">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="CheckingsAccount" Type="Self.CheckingsAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CheckingsAccount">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SavingsAccount_Person">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="SavingsAccount" Type="Self.SavingsAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SavingsAccount">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BankingSystemModelStoreContainer">
+    <EntitySet Name="CheckingsAccount" EntityType="Self.CheckingsAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SavingsAccount" EntityType="Self.SavingsAccount" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_CheckingsAccount_Person" Association="Self.FK_CheckingsAccount_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="CheckingsAccount" EntitySet="CheckingsAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SavingsAccount_Person" Association="Self.FK_SavingsAccount_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="SavingsAccount" EntitySet="SavingsAccount" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

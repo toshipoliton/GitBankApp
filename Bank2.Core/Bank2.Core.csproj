@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accounts\ApplicationException.cs" />
     <Compile Include="Accounts\Base\Account.cs" />
     <Compile Include="Accounts\CheckingsAccount.cs" />
     <Compile Include="Accounts\Enum\AccountType.cs" />

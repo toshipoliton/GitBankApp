@@ -38,11 +38,11 @@ namespace Bank2.Core
             switch (accounttype)
             {
                 case AccountType.CheckingsAcccount:
-                    var account = _accountService.createCheckingsAccount(personId, amount);
+                    var account = _accountService.CreateCheckingsAccount(personId, amount);
                     _accounts.Add(account);
                     return account.AccountNumber;
                 case AccountType.SavingsAccount:
-                    var saccount = _accountService.createSavingsAccount(personId, amount);
+                    var saccount = _accountService.CreateSavingsAccount(personId, amount);
                     _accounts.Add(saccount);
                     return saccount.AccountNumber;
                 default:
@@ -56,7 +56,7 @@ namespace Bank2.Core
             if (account != null)
             {
                 account.Deposit(amount);
-                _accountService.UpdateBalance(account, amount);
+                _accountService.UpdateBalance(account, account.Balance);
             }
 
             Console.WriteLine(GetAmount(accountnumber));
@@ -86,8 +86,9 @@ namespace Bank2.Core
             if (account != null)
             {
                 account.WithDraw(amount);
-                _accountService.UpdateBalance(account, -1 * amount);
+                _accountService.UpdateBalance(account, account.Balance);
             }
+            Console.WriteLine(GetAmount(accountnumber));
         }
 
         public void Transfer(Guid accountone, Guid accounttwo, decimal amount)
