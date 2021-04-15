@@ -1,0 +1,4 @@
+D:\Projects\GitBankApp\ClassLibraryBank2\bin\Debug\netcoreapp3.1\WebApplicationBank2.dll
+D:\Projects\GitBankApp\ClassLibraryBank2\obj\Debug\netcoreapp3.1\ClassLibraryBank2.csprojAssemblyReference.cache
+D:\Projects\GitBankApp\ClassLibraryBank2\obj\Debug\netcoreapp3.1\ClassLibraryBank2.AssemblyInfoInputs.cache
+D:\Projects\GitBankApp\ClassLibraryBank2\obj\Debug\netcoreapp3.1\ClassLibraryBank2.AssemblyInfo.cs

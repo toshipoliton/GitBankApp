@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank2.Core", "Bank2.Core\Ba
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!TEST", "!TEST", "{66B2DC26-E61A-48A4-8A6E-95FC500C5955}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationBank2", "WebApplicationBank2\WebApplicationBank2.csproj", "{782EACF5-18A9-41CC-946B-CFE9E7CAA24E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{32420A3D-7784-4DD1-AC25-48E7871E41EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibraryBank2", "ClassLibraryBank2\ClassLibraryBank2.csproj", "{E81C775A-C8C1-4190-8B37-D4FA8E3BE8C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +35,14 @@ Global
 		{2222E8F4-8C3D-4E14-96B5-DBD01F9A9214}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2222E8F4-8C3D-4E14-96B5-DBD01F9A9214}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2222E8F4-8C3D-4E14-96B5-DBD01F9A9214}.Release|Any CPU.Build.0 = Release|Any CPU
+		{782EACF5-18A9-41CC-946B-CFE9E7CAA24E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{782EACF5-18A9-41CC-946B-CFE9E7CAA24E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{782EACF5-18A9-41CC-946B-CFE9E7CAA24E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{782EACF5-18A9-41CC-946B-CFE9E7CAA24E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E81C775A-C8C1-4190-8B37-D4FA8E3BE8C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E81C775A-C8C1-4190-8B37-D4FA8E3BE8C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E81C775A-C8C1-4190-8B37-D4FA8E3BE8C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E81C775A-C8C1-4190-8B37-D4FA8E3BE8C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
